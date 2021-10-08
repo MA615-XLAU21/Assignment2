@@ -1,0 +1,61 @@
+---
+title: "XL's_presentation"
+author: "Xiang Li"
+date: "10/8/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source("XL's_wrangling_Code.R")
+source("XL's_visualization_function.R")
+```
+
+## Overview
+- Datasets chosen: From https://www.gapminder.org/data/
+- Two indicators in two datasets: Babies per women(total fertility)
+                             - & Employment rate(%), females aged 15+
+- Country chosen: Top Five Fastest Developing Countries 
+      from https://borgenproject.org/top-5-fastest-developing-countries/
+    - which are Argentina, India , China, Brazil, Guyana
+                 - Five Developed Countries
+    - which are United States, France, United Kingdom, Belgium, Spain
+
+## Developed Countries: Fertility   
+- (United States, France, United Kingdom, Belgium, Spain)
+
+```{r}
+visualization_function(data_join, country1 = "United States", country2 = "France",country3 = "United Kingdom", country4="Belgium",country5="Spain", indicators  = "fertility")
+```
+
+## Developed Countries: Employment% 
+- (United States, France, United Kingdom, Belgium, Spain)
+
+```{r}
+visualization_function(data_join, country1 = "United States", country2 = "France",country3 = "United Kingdom",country4="Belgium",country5="Spain", indicators = "femployrate")
+```
+
+## Developing Countries: Fertility
+- (Argentina, India , china, Brazil, guyana)
+```{r}
+visualization_function(data_join, country1 = "Argentina", country2 = "India",country3 = "China", country4="Brazil",country5="Guyana", indicators  = "fertility")
+
+```
+
+## Developing Countries: Employment%  
+- (Argentina, India , china, Brazil, guyana)
+```{r}
+visualization_function(data_join, country1 = "Argentina", country2 = "India",country3 = "China", country4="Brazil",country5="Guyana", indicators = "femployrate")
+```
+
+## Comparison
+- Fertility vs Employment Rate in Developed Countries
+     - when the Employment Rate is increasing from 1990 to 2020, the fertility is decreasing
+  - However,
+- Fertility vs Employment Rate in Developing Countries
+     - when the Employment Rate and fertility rate are both decreasing from 1990 to 2020.
+ 
+## Thought
+- Before I analyzed these two data sets, I think that the employment rate should be increasing no matter in which kinds country, especially, I chose five top fast developing countries in the world.
+- Moreover, I used to believe that the fertility rate is decreasing and one of the main reason is that female's employment rate is increasing.
+- The employment rates have different trend in developed and developing countries.
